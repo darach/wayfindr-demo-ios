@@ -253,8 +253,8 @@ struct WAYGraph: CustomStringConvertible {
             let toIndex = graph.indexOf(toNode) else {
                 return nil
         }
-        
-        let (_, paths) = dijkstra(graph, root: fromNode)
+
+        let (_, paths) = dijkstra(graph, root: fromNode, startDistance: 0)
         
         let shortestPath = pathDictToPath(fromIndex, to: toIndex, pathDict: paths)
         
